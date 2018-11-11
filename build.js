@@ -8,6 +8,7 @@ fs.mkdirSync("dist");
 
 copyFileSync("index.html", "dist/index.html");
 copyFileSync("main.css", "dist/main.css");
+copyFileSync("background.jpg", "dist/background.jpg");
 
 critical
   .generate({
