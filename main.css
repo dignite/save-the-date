@@ -16,10 +16,26 @@ html {
   }
 }
 
+@keyframes animated-background {
+  0% {
+    background-position: center center;
+  }
+  50% {
+    background-position: 100% 0;
+  }
+  100% {
+    background-position: center center;
+  }
+}
+
 .html--splash {
   height: 100%;
-  background: url(background.jpg) no-repeat center center fixed;
+  background: url(background.jpg),
+    linear-gradient(#6189d6, #7ba7e8, #f6b182, #34527a, #05172f);
+  background-repeat: no-repeat;
+  background-position: center center;
   background-size: cover;
+  animation: animated-background 60s linear infinite;
 }
 
 .body--splash {
@@ -31,6 +47,15 @@ html {
   justify-content: space-between;
 }
 
+@keyframes fade-slide-down {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
 .splash-text {
   text-shadow: 0 0 2vw rgba(0, 0, 0, 0.4);
   text-align: center;
@@ -38,6 +63,7 @@ html {
   align-items: center;
   justify-content: center;
   flex-direction: column;
+  animation: fade-slide-down 2s cubic-bezier(0.55, 0.06, 0.63, 0.87);
 }
 
 .splash-text--sky {

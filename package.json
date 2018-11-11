@@ -1,7 +1,6 @@
 {
   "name": "save-the-date",
   "version": "1.0.0",
-  "main": "index.js",
   "license": "Proprietary",
   "private": true,
   "scripts": {
