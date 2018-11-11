@@ -6,7 +6,7 @@
   "scripts": {
     "start": "http-server -o -c-1",
     "build": "node build.js",
-    "deploy": "yarn build && git add docs && git commit -m '[generated] Updated docs folder' && git push"
+    "deploy": "yarn build && git add docs/ && git commit -m \"[generated] Updated docs folder\" && git push"
   },
   "devDependencies": {
     "critical": "^1.3.4",
