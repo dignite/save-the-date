@@ -20,8 +20,14 @@ html {
   0% {
     background-position: center center;
   }
+  25% {
+    background-position: center left;
+  }
   50% {
-    background-position: 100% 0;
+    background-position: center center;
+  }
+  75% {
+    background-position: center right;
   }
   100% {
     background-position: center center;
@@ -35,7 +41,7 @@ html {
   background-repeat: no-repeat;
   background-position: center center;
   background-size: cover;
-  animation: animated-background 60s linear infinite;
+  animation: animated-background 90s linear infinite;
 }
 
 .body--splash {
