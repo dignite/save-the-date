@@ -85,6 +85,12 @@ html {
   margin: 0;
 }
 
+@media (max-height: 300px) {
+  .splash-text__above {
+    display: none;
+  }
+}
+
 .splash-text__headline {
   font-family: "Dancing Script", cursive;
   font-size: calc((15vw + 15vh * 0.43) / 2);
