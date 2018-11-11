@@ -1,14 +1,12 @@
 var rimraf = require("rimraf");
 var fs = require("fs");
-const copyFileSync = require("fs-copy-file-sync");
+const copydir = require("copy-dir");
 var critical = require("critical");
 
 rimraf.sync("docs");
 fs.mkdirSync("docs");
 
-copyFileSync("index.html", "docs/index.html");
-copyFileSync("main.css", "docs/main.css");
-copyFileSync("background.jpg", "docs/background.jpg");
+copydir.sync("src", "docs");
 
 critical
   .generate({

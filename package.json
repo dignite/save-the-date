@@ -9,8 +9,8 @@
     "deploy": "yarn build && git add docs/ && git commit -m \"[generated] Updated docs folder\" && git push"
   },
   "devDependencies": {
+    "copy-dir": "^0.4.0",
     "critical": "^1.3.4",
-    "fs-copy-file-sync": "^1.1.1",
     "http-server": "^0.11.1",
     "rimraf": "^2.6.2"
   }
