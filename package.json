@@ -1,0 +1,13 @@
+{
+  "name": "save-the-date",
+  "version": "1.0.0",
+  "main": "index.js",
+  "license": "Proprietary",
+  "private": true,
+  "scripts": {
+    "start": "http-server"
+  },
+  "devDependencies": {
+    "http-server": "^0.11.1"
+  }
+}

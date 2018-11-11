@@ -1,0 +1,52 @@
+html {
+  font-family: "Open Sans", sans-serif;
+  color: #0e1111;
+}
+
+/* 16px @ 480px increasing to 32px @ 1680px */
+@media (min-width: 480px) {
+  :root {
+    font-size: calc(1rem + ((1vw - 4.8px) * 1.3333));
+  }
+}
+
+@media (min-width: 1680px) {
+  :root {
+    font-size: 32px;
+  }
+}
+
+.html--splash {
+  height: 100%;
+  background: url(background.jpg) no-repeat center center fixed;
+  background-size: cover;
+}
+
+.page--center {
+  display: flex;
+  align-items: center;
+  margin: 0;
+  height: 100%;
+  flex-direction: column;
+}
+
+.splash-text {
+  text-align: center;
+  text-shadow: 0 0 2vw rgba(230, 230, 230, 0.4);
+  height: 43%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.splash-text__above,
+.splash-text__below {
+  margin: 0;
+}
+
+.splash-text__headline {
+  font-family: "Dancing Script", cursive;
+  font-size: calc((15vw + 15vh * 0.43) / 2);
+  margin: 0;
+}
