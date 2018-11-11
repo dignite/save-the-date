@@ -41,7 +41,7 @@ html {
   background-repeat: no-repeat;
   background-position: center center;
   background-size: cover;
-  animation: animated-background 90s linear infinite;
+  animation: animated-background 90s ease-in-out infinite;
 }
 
 .body--splash {
