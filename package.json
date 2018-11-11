@@ -4,9 +4,11 @@
   "license": "Proprietary",
   "private": true,
   "scripts": {
-    "start": "http-server"
+    "start": "http-server",
+    "build": "node build.js"
   },
   "devDependencies": {
+    "critical": "^1.3.4",
     "http-server": "^0.11.1"
   }
 }
