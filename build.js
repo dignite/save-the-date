@@ -3,12 +3,12 @@ var fs = require("fs");
 const copyFileSync = require("fs-copy-file-sync");
 var critical = require("critical");
 
-rimraf.sync("dist");
-fs.mkdirSync("dist");
+rimraf.sync("docs");
+fs.mkdirSync("docs");
 
-copyFileSync("index.html", "dist/index.html");
-copyFileSync("main.css", "dist/main.css");
-copyFileSync("background.jpg", "dist/background.jpg");
+copyFileSync("index.html", "docs/index.html");
+copyFileSync("main.css", "docs/main.css");
+copyFileSync("background.jpg", "docs/background.jpg");
 
 critical
   .generate({
@@ -18,7 +18,7 @@ critical
     inline: true,
 
     // Your base directory
-    base: "dist/",
+    base: "docs/",
 
     // HTML source file
     src: "index.html",
@@ -43,5 +43,5 @@ critical
     timeout: 30000
   })
   .then(function(output) {
-    fs.unlinkSync("dist/main.css");
+    fs.unlinkSync("docs/main.css");
   });
