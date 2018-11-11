@@ -1,6 +1,6 @@
 html {
   font-family: "Open Sans", sans-serif;
-  color: #0e1111;
+  color: #f3eded;
 }
 
 /* 16px @ 480px increasing to 32px @ 1680px */
@@ -32,8 +32,8 @@ html {
 }
 
 .splash-text {
+  text-shadow: 0 0 2vw rgba(0, 0, 0, 0.4);
   text-align: center;
-  text-shadow: 0 0 2vw rgba(230, 230, 230, 0.4);
   display: flex;
   align-items: center;
   justify-content: center;
@@ -45,8 +45,6 @@ html {
 }
 
 .splash-text--lake {
-  color: white;
-  text-shadow: 0 0 2vw rgba(0, 0, 0, 0.4);
   height: 35%;
 }
 
@@ -66,7 +64,7 @@ html {
 }
 
 a.splash-text {
-  color: white;
+  color: #f3eded;
   text-decoration: none;
 }
 
