@@ -1,33 +1,46 @@
+var rimraf = require("rimraf");
+var fs = require("fs");
+const copyFileSync = require("fs-copy-file-sync");
 var critical = require("critical");
 
-critical.generate({
-  // Inline the generated critical-path CSS
-  // - true generates HTML
-  // - false generates CSS
-  inline: true,
+rimraf.sync("dist");
+fs.mkdirSync("dist");
 
-  // Your base directory
-  base: "./",
+copyFileSync("index.html", "dist/index.html");
+copyFileSync("main.css", "dist/main.css");
 
-  // HTML source file
-  src: "index.html",
+critical
+  .generate({
+    // Inline the generated critical-path CSS
+    // - true generates HTML
+    // - false generates CSS
+    inline: true,
 
-  // Viewport width
-  width: 1300,
+    // Your base directory
+    base: "dist/",
 
-  // Viewport height
-  height: 900,
+    // HTML source file
+    src: "index.html",
 
-  // Target for final HTML output.
-  // use some CSS file when the inline option is not set
-  dest: "dist/index.html",
+    // Viewport width
+    width: 1300,
 
-  // Minify critical-path CSS when inlining
-  minify: true,
+    // Viewport height
+    height: 900,
 
-  // Extract inlined styles from referenced stylesheets
-  extract: true,
+    // Target for final HTML output.
+    // use some CSS file when the inline option is not set
+    dest: "index.html",
 
-  // Complete Timeout for Operation
-  timeout: 30000
-});
+    // Minify critical-path CSS when inlining
+    minify: true,
+
+    // Extract inlined styles from referenced stylesheets
+    extract: true,
+
+    // Complete Timeout for Operation
+    timeout: 30000
+  })
+  .then(function(output) {
+    fs.unlinkSync("dist/main.css");
+  });

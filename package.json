@@ -9,6 +9,8 @@
   },
   "devDependencies": {
     "critical": "^1.3.4",
-    "http-server": "^0.11.1"
+    "fs-copy-file-sync": "^1.1.1",
+    "http-server": "^0.11.1",
+    "rimraf": "^2.6.2"
   }
 }
