@@ -1,7 +1,7 @@
-var rimraf = require("rimraf");
-var fs = require("fs");
+const rimraf = require("rimraf");
+const fs = require("fs");
 const copydir = require("copy-dir");
-var critical = require("critical");
+const critical = require("critical");
 
 rimraf.sync("docs");
 fs.mkdirSync("docs");
