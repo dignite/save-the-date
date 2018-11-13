@@ -41,7 +41,7 @@ html {
   background-repeat: no-repeat;
   background-position: center center;
   background-size: cover;
-  animation: animated-background 90s ease-in-out infinite;
+  animation: animated-background 240s linear infinite;
 }
 
 .body--splash {
@@ -69,7 +69,6 @@ html {
   align-items: center;
   justify-content: center;
   flex-direction: column;
-  animation: fade-slide-down 2s cubic-bezier(0.55, 0.06, 0.63, 0.87);
 }
 
 .splash-text--sky {
