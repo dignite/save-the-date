@@ -108,3 +108,12 @@ a.splash-text {
 a.splash-text:hover {
   text-shadow: 0 0 2vw rgba(250, 250, 250, 0.8);
 }
+
+.photo-attribution {
+  text-decoration: none;
+  font-size: 12px;
+  position: absolute;
+  right: 10px;
+  bottom: 10px;
+  color: #f3eded;
+}
